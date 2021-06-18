@@ -13,3 +13,10 @@ jobs:
         uses: JamesIves/fetch-api-data-action@releases/v1
         with:
           ENDPOINT: https://cdn.contentful.com/spaces/iw94f7ho69tg/environments/master/content_types?access_token=J28S8RlEA0AUTVDAAwF2NRBkDVQjuh7k7h9PPjP2C14
+      - name: Build and Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: master # Pushes the updates to the master branch.
+          FOLDER: fetch-api-data-action # The location of the data.json file saved by the Fetch API Data action.
+          TARGET_FOLDER: data
