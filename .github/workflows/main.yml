@@ -13,5 +13,5 @@ jobs:
           time: "5m"
       - uses: gautamkrishnar/blog-post-workflow@master
         with:
-          feed_list: "https://stackoverflow.com/feeds/user/6761028"
+          feed_list: "https://app.contentful.com/spaces/iw94f7ho69tg"
           commit_message: "Updated README with latest blog posts"
