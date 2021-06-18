@@ -1,6 +1,6 @@
 name: Latest blog post workflow
 on:
-  release:
+  repository_dispatch:
     types: [contentful.deploy]
 jobs:
   update-readme-with-blog:
