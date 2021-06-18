@@ -11,7 +11,7 @@ jobs:
       - uses: jakejarvis/wait-action@master
         with:
           time: "5m"
-      - uses: ravipandey19/solutions@main
+      - uses: gautamkrishnar/blog-post-workflow@master
         with:
           feed_list: "https://stackoverflow.com/feeds/user/6761028"
           commit_message: "Updated README with latest blog posts"
