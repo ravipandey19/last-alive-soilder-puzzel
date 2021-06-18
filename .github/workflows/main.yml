@@ -9,7 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: jakejarvis/wait-action@master
-      - uses: gautamkrishnar/blog-post-workflow@master
+      - name: create-json
+        id: create-json
+        uses: jsdaniell/create-json@1.1.2
         with:
-          feed_list: "https://preview.contentful.com/spaces/iw94f7ho69tg/environments/master/content_types/blockCards?access_token=sthThfu2AHyzzpZTCLQATQOVmG_iiX4YBy_c6BF_jz8"
-          commit_message: "Updated README with latest blog posts"
+         name: "credentials.json"
+         json: "https://preview.contentful.com/spaces/iw94f7ho69tg/environments/master/content_types/blockCards?access_token=sthThfu2AHyzzpZTCLQATQOVmG_iiX4YBy_c6BF_jz8"
