@@ -9,9 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: jakejarvis/wait-action@master
-      - name: create-json
-        id: create-json
-        uses: jsdaniell/create-json@1.1.2
+      - name: Fetch API Data 📦
+        uses: JamesIves/fetch-api-data-action@releases/v1
         with:
-         name: "credentials.json"
-         json: "https://preview.contentful.com/spaces/iw94f7ho69tg/environments/master/content_types/blockCards?access_token=sthThfu2AHyzzpZTCLQATQOVmG_iiX4YBy_c6BF_jz8"
+          ENDPOINT: https://cdn.contentful.com/spaces/iw94f7ho69tg/environments/master/content_types?access_token=J28S8RlEA0AUTVDAAwF2NRBkDVQjuh7k7h9PPjP2C14
