@@ -11,8 +11,7 @@ jobs:
    - name: Setup Node
      uses: actions/setup-node@v1
      with:
-      	node-version: '12.x'
-
+      node-version: '12.x'
    - name: Cache dependencies
    uses: actions/cache@v1
    	with:
@@ -22,8 +21,7 @@ jobs:
         	${{ runner.os }}-node-
   - run: npm ci
   - run: npm run build
-
-  	- name: Deploy
+  - name: Deploy
     	uses: peaceiris/actions-gh-pages@v3
     	with:
       	deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
